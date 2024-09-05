@@ -3,7 +3,7 @@
 int frontdist = 0;
 int leftdist = 0;
 int rightdist = 0;
-int Kp = 1, Kd = 0.2, Ki = 0.005, integral = 0, errold = 0, err = 0, U = 0, target = 25, L = 0, R = 0;
+int Kp = 2, Kd = 0.4, Ki = 0.005, integral = 0, errold = 0, err = 0, U = 0, target = 25, L = 0, R = 0;
 
 Servo servo_9;
 
@@ -92,14 +92,6 @@ errold = err;
     leftdist = 0.01723 * readUltrasonicDistance(13, 12);
 
     err = target - rightdist;
-
-     if (abs(err) < 10) {
-    Kp = 0.5;  
-    Kd = 0.1;
-} else {
-    Kp = 1.0;  
-    Kd = 0.2;
-}
 
     integral += err;
     U = err * Kp + Kd * (err - errold) + Ki * integral;
