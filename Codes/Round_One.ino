@@ -4,7 +4,7 @@
 int frontdist = 0;
 int leftdist = 0;
 int rightdist = 0;
-int Kp = 1.5, Kd = 0.4, errold = 0, err = 0, U = 0, target = 25, L = 0, R = 0, c = 0;
+int Kp = 1.5, Kd = 0.4, errold = 0, err = 0, U = 0, target = 30, L = 0, R = 0, c = 0;
 
 Servo servo_9;
 
@@ -51,7 +51,6 @@ void loop()
     //Desicion
     if(L == 0 and R == 0)
   {
-  frontdist = 0.01723 * readUltrasonicDistance(A1, A0);
   leftdist = 0.01723 * readUltrasonicDistance(12, 13);
   rightdist = 0.01723 * readUltrasonicDistance(11, 10);
 
@@ -104,7 +103,6 @@ void loop()
   
   // Left
   while(L == 1){
-  frontdist = 0.01723 * readUltrasonicDistance(A1, A0);
   leftdist = 0.01723 * readUltrasonicDistance(12, 13);
   rightdist = 0.01723 * readUltrasonicDistance(11, 10);
 
@@ -118,6 +116,20 @@ void loop()
       delay(500);
   }
 
+  // if(frontdist <= 15){
+  //   digitalWrite(7, HIGH);
+  //   digitalWrite(3, HIGH);
+  //   digitalWrite(8, LOW);
+  //   digitalWrite(4, LOW);  
+  //     servo_9.write(55);
+  //     delay(1500);
+  //   digitalWrite(8, HIGH);
+  //   digitalWrite(4, HIGH);
+  //   digitalWrite(7, LOW);
+  //   digitalWrite(3, LOW);  
+  //     servo_9.write(105);
+  //     delay(500);
+  // }
 
 
     if (80 + U > 107) {
@@ -134,7 +146,6 @@ delay(200);
 
   //Right
   while(R == 1){
-  frontdist = 0.01723 * readUltrasonicDistance(A1, A0);
   leftdist = 0.01723 * readUltrasonicDistance(12, 13);
   rightdist = 0.01723 * readUltrasonicDistance(11, 10);
 
@@ -142,10 +153,22 @@ delay(200);
 
     U = err * Kp + Kd * (err - errold);
 
-      if(leftdist <= 10){
-    servo_9.write(55);
-    delay(500);
-  }
+
+  //     if(frontdist <= 15){
+  //   digitalWrite(7, HIGH);
+  //   digitalWrite(3, HIGH);
+  //   digitalWrite(8, LOW);
+  //   digitalWrite(4, LOW);  
+  //     servo_9.write(105);
+  //     delay(1500);
+  //   digitalWrite(8, HIGH);
+  //   digitalWrite(4, HIGH);
+  //   digitalWrite(7, LOW);
+  //   digitalWrite(3, LOW);  
+  //     servo_9.write(55);
+  //     delay(500);
+  // }
+
 
     if (80 + U < 55) {
       servo_9.write(55);
@@ -156,4 +179,4 @@ delay(200);
 errold = err;
 
   }
-} 
+}     
