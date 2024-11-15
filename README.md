@@ -61,4 +61,4 @@ biz bu sensorlardan ona gore istifade etdik ki 2ci raundda xeritede coxlu kubikl
 " width="85%" /> | 
 | :--: | :--: | 
 | *right* | *left* |
-![leftt](https://github.com/user-attachments/assets/9f892226-cf98-40d0-9559-021386025dd0)
+
