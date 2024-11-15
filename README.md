@@ -1,7 +1,7 @@
 # SHUSHA-AZE 2024
  ### movzular
 * Codes
-* Components
+* [Components]
 * Design
 * Robot Photos
 * Scheme
