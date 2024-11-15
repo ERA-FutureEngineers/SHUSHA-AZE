@@ -21,21 +21,34 @@ pixyni secmekde esas meqsedimiz onun yuksek goruntu islemesi ve gecikme olmamasi
 Gyro sensordan istifadə etmək üçün MPU6050.h kitabxanasını daxil etməliyik. baslayarken sensorun errorunu olcmek ucun 5 saniyelik zaman vermisik. bu da robotun daha deqiq ve duzgun islemeyine komek olur
 * Driver L298N
 
-  ![driverl298n-222](https://github.com/user-attachments/assets/b9b312d4-a93b-4e89-94e5-a0e05b13fd90)
+![driverl298n-222](https://github.com/user-attachments/assets/b9b312d4-a93b-4e89-94e5-a0e05b13fd90)
 
  biz layihede l298n driverinden istifade etmisik. bu driver dc motorlar ile unikal isleyir ve bizim ucun hec bir problem yaratmir
 * Servo
 
-   ![servo222](https://github.com/user-attachments/assets/75496dab-44af-484e-960c-b52d35b29692)
+![servo222](https://github.com/user-attachments/assets/75496dab-44af-484e-960c-b52d35b29692)
 
 biz donmeni servo vasitesile etmisik. servo ile gyronu konfiqurasiya edib robotun daha deqiq islemesini temin etmisik
 
 * Dc motors
 
+![dc-motors222](https://github.com/user-attachments/assets/86ba6389-0e62-4d51-9de1-91c468af46a2)
+
 
 * Ultrasonic sensors
   
+![ultra-s222](https://github.com/user-attachments/assets/b5a9c8c8-3723-4640-bd6a-d485d4359abd)
 
-### Codes
- #### First Round Code
- 
+ultrasonic sensorlar bize zaman-zaman problem yaratsada biz o problemleri muxtelif yollarla asmaqa calisidiq. biz yarisa az qalmis tof sensorundan istifade etmek istedik lakin onu alib, konfiqurasiya etmeye yeterince vaxtimiz olmadigindan biz yene de ultrasonicle davam etdik.
+
+* Arduino Mega 2560 Rev3
+
+
+
+
+* E18-D80NK Ir sensors
+
+
+
+biz bu sensorlardan ona gore istifade etdik ki 2ci raundda xeritede coxlu kubikler oldugu zaman ultrasonic duzgun data vermirdi ve buna gore de robot duzgun islemir ve deyirdi. bu sensorlari isletmek isimize cox yaradi 
+  
