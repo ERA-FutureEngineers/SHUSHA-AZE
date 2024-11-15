@@ -19,7 +19,8 @@ pixyni secmekde esas meqsedimiz onun yuksek goruntu islemesi ve gecikme olmamasi
 
 
 Gyro sensordan istifadə etmək üçün MPU6050.h kitabxanasını daxil etməliyik. baslayarken sensorun errorunu olcmek ucun 5 saniyelik zaman vermisik. bu da robotun daha deqiq ve duzgun islemeyine komek olur
-
+* Driver L298N
+  
 
 * Servo
 
