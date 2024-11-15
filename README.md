@@ -58,6 +58,6 @@ biz bu sensorlardan ona gore istifade etdik ki 2ci raundda xeritede coxlu kubikl
 ### Robot Photos
 
 ![robottttt](https://github.com/user-attachments/assets/ffce18df-a5c6-43d8-882b-7513a8aac547)
-| <img src="![robottttt](https://github.com/user-attachments/assets/ffce18df-a5c6-43d8-882b-7513a8aac547)" width="90%" /> | 
+| <img src="![robottttt](https://github.com/user-attachments/assets/ffce18df-a5c6-43d8-882b-7513a8aac547)" width="34%" /> | 
 | :--: | :--: | 
 
