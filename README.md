@@ -26,7 +26,15 @@ Gyro sensordan istifadə etmək üçün MPU6050.h kitabxanasını daxil etməliy
  biz layihede l298n driverinden istifade etmisik. bu driver dc motorlar ile unikal isleyir ve bizim ucun hec bir problem yaratmir
 * Servo
 
-   
+   ![servo222](https://github.com/user-attachments/assets/75496dab-44af-484e-960c-b52d35b29692)
+
+biz donmeni servo vasitesile etmisik. servo ile gyronu konfiqurasiya edib robotun daha deqiq islemesini temin etmisik
+
+* Dc motors
+
+
+* Ultrasonic sensors
+  
 
 ### Codes
  #### First Round Code
