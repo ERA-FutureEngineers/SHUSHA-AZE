@@ -1,6 +1,8 @@
 # SHUSHA-AZE 2024
  ### movzular
-* Codes
+* [Codes]
+*  [First Raund]
+*  [Second Raund]
 * [Components](#components)
 * Design
 * Robot Photos
@@ -53,3 +55,5 @@ biz ilk once arduino uno istifade edirdik .lakin robotu inkisaf etdirdikce senso
 
 biz bu sensorlardan ona gore istifade etdik ki 2ci raundda xeritede coxlu kubikler oldugu zaman ultrasonic duzgun data vermirdi ve buna gore de robot duzgun islemir ve deyirdi. bu sensorlari isletmek isimize cox yaradi .
   
+###Robot Photos
+
