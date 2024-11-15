@@ -20,9 +20,13 @@ pixyni secmekde esas meqsedimiz onun yuksek goruntu islemesi ve gecikme olmamasi
 
 Gyro sensordan istifadə etmək üçün MPU6050.h kitabxanasını daxil etməliyik. baslayarken sensorun errorunu olcmek ucun 5 saniyelik zaman vermisik. bu da robotun daha deqiq ve duzgun islemeyine komek olur
 * Driver L298N
-  
 
+  ![driverl298n-222](https://github.com/user-attachments/assets/b9b312d4-a93b-4e89-94e5-a0e05b13fd90)
+
+ biz layihede l298n driverinden istifade etmisik. bu driver dc motorlar ile unikal isleyir ve bizim ucun hec bir problem yaratmir
 * Servo
+
+   
 
 ### Codes
  #### First Round Code
