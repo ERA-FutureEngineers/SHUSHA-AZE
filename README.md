@@ -43,12 +43,13 @@ ultrasonic sensorlar bize zaman-zaman problem yaratsada biz o problemleri muxtel
 
 * Arduino Mega 2560 Rev3
 
+![mega222](https://github.com/user-attachments/assets/acd3ee99-1cf3-49d2-a23e-a3e3defd6a00)
 
-
+biz ilk once arduino uno istifade edirdik .lakin robotu inkisaf etdirdikce sensorlar coxaldi ve sensorlar ucun pin yeri qalmadi ve bizde arduino megaya kecmek qerarina geldik . Arduino mega bir cox ozelliyine gore unodan cox qabaqdadir.
 
 * E18-D80NK Ir sensors
 
+![ir222](https://github.com/user-attachments/assets/ee5489d9-d60a-482e-b7aa-b3b7e78ee29f)
 
-
-biz bu sensorlardan ona gore istifade etdik ki 2ci raundda xeritede coxlu kubikler oldugu zaman ultrasonic duzgun data vermirdi ve buna gore de robot duzgun islemir ve deyirdi. bu sensorlari isletmek isimize cox yaradi 
+biz bu sensorlardan ona gore istifade etdik ki 2ci raundda xeritede coxlu kubikler oldugu zaman ultrasonic duzgun data vermirdi ve buna gore de robot duzgun islemir ve deyirdi. bu sensorlari isletmek isimize cox yaradi .
   
