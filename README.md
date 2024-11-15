@@ -55,5 +55,9 @@ biz ilk once arduino uno istifade edirdik .lakin robotu inkisaf etdirdikce senso
 
 biz bu sensorlardan ona gore istifade etdik ki 2ci raundda xeritede coxlu kubikler oldugu zaman ultrasonic duzgun data vermirdi ve buna gore de robot duzgun islemir ve deyirdi. bu sensorlari isletmek isimize cox yaradi .
   
-###Robot Photos
+### Robot Photos
+
+![robottttt](https://github.com/user-attachments/assets/ffce18df-a5c6-43d8-882b-7513a8aac547)
+| <img src="![robottttt](https://github.com/user-attachments/assets/ffce18df-a5c6-43d8-882b-7513a8aac547)" width="90%" /> | 
+| :--: | :--: | 
 
