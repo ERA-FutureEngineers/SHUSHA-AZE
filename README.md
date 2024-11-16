@@ -190,6 +190,14 @@ At first we were using arduino uno, but as we developed the robot, the sensors i
 
 As you know, ultrasonics measure the distance with sound waves. because the sound wave form is less than the light form, it caused us many problems. we used it accordingly. now we use both ultrasonic sensor and E18-D80NK Ir sensors in the robot. These sensors provide data faster and work without delay.
 
+### Power Managament <a class="anchor" id="power"></a>
+
+![battery1](https://github.com/user-attachments/assets/c83aaf44-5204-45be-8c09-ef02d80060a1)
+![bat2](https://github.com/user-attachments/assets/ea9d6417-f4a9-4d5d-9c05-b6b975955388)
+
+
+We used Cylindrical Lithium Polymer Battery 3.7V 18650 Rechargeable Lipo Battery as a battery. We use 3 units of this battery and it gives us approximately 11v energy. We connect the 11v driver and get 5v energy from the output of the driver. This energy is enough for the sensors to work properly. Also, since these batteries are not very heavy, they help the robot to work faster. batareyalarin her biri 47.5gramdir.
+
 ### Robot Photos <a class="anchor" id="robotphotos"></a>
 
 | <img src="./Robot-photos/Robot_Left.jpg" width="90%" /> | <img src="./Robot-photos/Robot_Right.jpg" width="85%" /> | 
@@ -200,11 +208,6 @@ As you know, ultrasonics measure the distance with sound waves. because the soun
 | <img src="./Robot-photos/Robot_Up.jpg" width="90%" /> | <img src="./Robot-photos/Robot_Downjpg.jpg" width="85%" /> | 
 | *Up* | *Down* |
 
-### Power Managament <a class="anchor" id="power"></a>
-
-![battery1](https://github.com/user-attachments/assets/c83aaf44-5204-45be-8c09-ef02d80060a1)
-
-We used Cylindrical Lithium Polymer Battery 3.7V 18650 Rechargeable Lipo Battery as a battery. We use 3 units of this battery and it gives us approximately 11v energy. We connect the 11v driver and get 5v energy from the output of the driver. This energy is enough for the sensors to work properly. Also, since these batteries are not very heavy, they help the robot to work faster. batareyalarin her biri 47.5gramdir.
 
 ### Scheme <a class="anchor" id="scheme"></a>
 
