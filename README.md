@@ -15,6 +15,40 @@
 ![pixy222](https://github.com/user-attachments/assets/ea5298ed-464a-4901-aa05-9aa7c3aeb38f)
 
 Our main goal in choosing the pixy was its high performance and no lag. At first we were thinking of using esp cam, but after we found out that its image processing is weak, we switched to pixabay. It is very easy to connect the pixy to arduino or other microcontroller.
+
+Biz bu kodda pixyle kub arasindaki mesafeni olcuruk
+
+```ino
+#include <Pixy2.h>
+#include <Servo.h>
+
+Servo servo_9;
+long duration;
+int distance;
+ float knownWidth = 5.0;
+ float focalLength = 218; 
+ int colorX = 0;
+Pixy2 pixy;
+
+void setup() {
+  servo_9.attach(2);
+  Serial.begin(9600);
+  pixy.init();
+}
+
+void loop() {
+  pixy.ccc.getBlocks();
+  
+  if (pixy.ccc.numBlocks) {
+    int objectWidth = pixy.ccc.blocks[0].m_width; 
+    int colorX = pixy.ccc.blocks[0].m_x;
+    
+    float distance = (knownWidth * focalLength) / objectWidth;
+    Serial.println(distance);
+    delay(50);
+  }
+}
+```
 * MPU6050
 
 ![mpu222](https://github.com/user-attachments/assets/70847a97-fe15-469f-8533-9a55b9ff14db)
