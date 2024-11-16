@@ -53,6 +53,38 @@ void loop() {
 
 ![mpu222](https://github.com/user-attachments/assets/70847a97-fe15-469f-8533-9a55b9ff14db)
 
+Bu kod gyro ile derece olcmek ucundur.
+```ino
+void updateGyroAngle() {
+  int16_t gz;
+  unsigned long currentTime = millis();
+  float deltaTime = (currentTime - previousTime) / 1000.0;
+  previousTime = currentTime;
+
+  gz = gyro.getRotationZ();
+
+  float rotationZ = (gz / 131.0) - offsetZ;
+  currentAngle += rotationZ * deltaTime;
+
+  Serial.print("Filtered Angle (Yaw): ");
+  Serial.println(currentAngle);
+
+```
+
+ Robotu merkezde saxlamaq robotu duzeltmek ucun kod
+```ino
+void Gyro() {
+  if (currentAngle - 5 > targetAngle) {
+    servo_9.write(90 - angle);
+  } else if (currentAngle + 5 < targetAngle) {
+    servo_9.write(90 + angle);
+  } else {
+    servo_9.write(90);
+  }
+  updateGyroAngle();
+}
+```
+
 
 To use the gyro sensor, we need to include the MPU6050.h library. We have given 5 seconds time to measure the error of the sensor while starting. This helps the robot to work more accurately and correctly
 
@@ -135,6 +167,5 @@ biz bu sensorlardan ona gore istifade etdik ki 2ci raundda xeritede coxlu kubikl
 | :--: | :--: | 
 | *Left* | *Right* |
 | <img src="./Robot-photos/Robot_Front.jpg" width="90%" /> | <img src="./Robot-photos/Robot_Back.jpg" width="85%" /> | 
-
 | *Front* | *Back* |
 
