@@ -7,7 +7,7 @@
 * Design
 * [Robot Photos](#robotphotos)
 * [Scheme](#scheme)
-* TeamPhoto
+* [TeamPhoto](#tphoto)
 
 ### Components <a class="anchor" id="components"></a>
 * Pixy2.1 cam  
@@ -174,3 +174,6 @@ As you know, ultrasonics measure the distance with sound waves. because the soun
 | <img src="./Scheme/scheme-robot.jpg" width="90%" /> | <img src="./Scheme/scheme-robot2.jpg" width="85%" /> | 
 | :--: | :--: | 
 | *Scheme* | *Circuit diagram* |
+
+### TeamPhoto <a class="anchor" id="tphoto"></a>
+
