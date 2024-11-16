@@ -201,9 +201,9 @@ As you know, ultrasonics measure the distance with sound waves. because the soun
 
 ### Power Managament <a class="anchor" id="power"></a>
 
+![battery1](https://github.com/user-attachments/assets/c83aaf44-5204-45be-8c09-ef02d80060a1)
 
-
-We used Cylindrical Lithium Polymer Battery 3.7V 18650 Rechargeable Lipo Battery as a battery. We use 3 units of this battery and it gives us approximately 11v energy. We connect the 11v driver and get 5v energy from the output of the driver. This energy is enough for the sensors to work properly. Also, since these batteries are not very heavy, they help the robot to work faster
+We used Cylindrical Lithium Polymer Battery 3.7V 18650 Rechargeable Lipo Battery as a battery. We use 3 units of this battery and it gives us approximately 11v energy. We connect the 11v driver and get 5v energy from the output of the driver. This energy is enough for the sensors to work properly. Also, since these batteries are not very heavy, they help the robot to work faster. batareyalarin her biri 47.5gramdir.
 
 ### Scheme <a class="anchor" id="scheme"></a>
 
