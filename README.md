@@ -88,9 +88,10 @@ void Gyro() {
 
 To use the gyro sensor, we need to include the MPU6050.h library. We have given 5 seconds time to measure the error of the sensor while starting. This helps the robot to work more accurately and correctly
 
-* Driver L298N
+* Driver L298N and Dc motors
 
 ![driverl298n-222](https://github.com/user-attachments/assets/b9b312d4-a93b-4e89-94e5-a0e05b13fd90)
+![dc-motors222](https://github.com/user-attachments/assets/86ba6389-0e62-4d51-9de1-91c468af46a2)
 
 We used the l298n driver in the project. This driver works uniquely with dc motors and doesn't cause any problems for us.
 * Servo
