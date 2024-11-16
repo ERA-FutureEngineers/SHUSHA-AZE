@@ -93,7 +93,7 @@ To use the gyro sensor, we need to include the MPU6050.h library. We have given 
 ![driverl298n-222](https://github.com/user-attachments/assets/b9b312d4-a93b-4e89-94e5-a0e05b13fd90)
 ![dc-motors222](https://github.com/user-attachments/assets/86ba6389-0e62-4d51-9de1-91c468af46a2)
 
-We used the l298n driver in the project. This driver works uniquely with dc motors and doesn't cause any problems for us.
+We used the L298N and 2 Dc gear motors driver in the project. This driver works uniquely with dc motors and doesn't cause any problems for us.
 * Servo
 
 ![servo222](https://github.com/user-attachments/assets/75496dab-44af-484e-960c-b52d35b29692)
