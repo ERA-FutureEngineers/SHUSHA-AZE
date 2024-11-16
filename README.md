@@ -56,6 +56,9 @@ void loop() {
 
 ![mpu222](https://github.com/user-attachments/assets/70847a97-fe15-469f-8533-9a55b9ff14db)
 
+Gyro sensordan istifadə etmək üçün əvvəlcə MPU6050.h kitabxanasını layihəyə daxil etməliyik. Bu kitabxana, MPU6050 sensorunun funksiyalarını idarə etmək və məlumatlarını oxumaq üçün lazımdır. Robotu yandirdiqdan sonra , sensorun dəqiq işləməsi üçün ilkin olaraq 5 saniyəlik bir zaman aralığı veririk. Bu zaman ərzində sensorun özünü düzgün kalibrləməsinə və mümkün səhvlərini minimuma endirməsinə imkan veririk. Beləliklə, sensorun doğru məlumatları əldə etməsi və düzgün işləməsi, robotun performansını artırır və düzgün idarə edilməsini təmin edir.
+
+
 Bu kod gyro ile derece olcmek ucundur.
 ```ino
 void updateGyroAngle() {
@@ -89,12 +92,13 @@ void Gyro() {
 ```
 
 
-To use the gyro sensor, we need to include the MPU6050.h library. We have given 5 seconds time to measure the error of the sensor while starting. This helps the robot to work more accurately and correctly
-
 * Driver L298N and Dc motors
 
 ![driverl298n-222](https://github.com/user-attachments/assets/b9b312d4-a93b-4e89-94e5-a0e05b13fd90)
 ![dc-motors222](https://github.com/user-attachments/assets/86ba6389-0e62-4d51-9de1-91c468af46a2)
+
+Biz layihədə L298N və 2 DC dişli mühərrik sürücüsündən istifadə etdik. Bu sürücü sabit cərəyan mühərrikləri ilə uyğun işləyir və layihəmizdə heç bir problem yaratmır. L298N, mühərriklərin fırlanma yönünü idarə etmək və lazım olan gücü vermək üçün yaxşı bir həll təklif edir. L298N, mühərrikləri sürətli və etibarlı şəkildə idarə etməyə kömək edir.
+
 
 bu motorlari xodlamaq ucun koddur
 ```ino
@@ -128,12 +132,12 @@ void moveForward(int speed) {
   analogWrite(RIGHT_MOTOR_PWM, speed);
 }
 ```
-We used the L298N and 2 Dc gear motors driver in the project. This driver works uniquely with dc motors and doesn't cause any problems for us.
+
 * Servo
 
 ![servo222](https://github.com/user-attachments/assets/75496dab-44af-484e-960c-b52d35b29692)
 
-We have done the freezing with servo means. We have configured the servo and gyro and ensured the robot works more accurately.
+Robotumuzun dönmə sistemi servo və gyro sensorunun birgə işləməsi ilə təmin etdik. Gyro sensoru, robotun hərəkət zamanı dönmə bucağını və istiqamət dəyişikliklərini ölçərək servoya dəqiq məlumat göndərir. Bu məlumat əsasında servo düzgün hərəkət edir və robotun dönməsi daha dəqiq şəkildə həyata keçir. 
 
 * Ultrasonic sensors
   
@@ -182,21 +186,21 @@ void loop() {
 
 ![mega222](https://github.com/user-attachments/assets/acd3ee99-1cf3-49d2-a23e-a3e3defd6a00)
 
-At first we were using arduino uno, but as we developed the robot, the sensors increased and there was no place for the pins for the sensors, and we decided to switch to the arduino mega. Arduino mega is far ahead of uno in terms of many features.
+Əvvəlcə robotumuzda Arduino Uno istifadə edirdik. Lakin layihə inkişaf etdikcə sensorların sayı artdı və Uno üzərindəki pinlər kifayət etmədi. Bu səbəbdən Arduino Mega-ya keçmək qərarina qeldik. Mega, Uno ilə müqayisədə daha geniş imkanlara malikdir. Məsələn, Uno-da cəmi 14 rəqəmsal giriş/çıxış pini və 6 analoq giriş pini mövcuddur, halbuki Mega 54 rəqəmsal giriş/çıxış pini və 16 analoq giriş pini təklif edir. Bu əlavə pinlər daha çox sensor birləşdirməyə imkan yaradır. Bundan əlavə, Mega daha çox yaddaşa (Uno-da 32 KB, Mega-da 256 KB) və daha güclü prosessora malikdir. Megaya kecmeyimiz robotun inkişafı üçün cox vacib idi, çünki Mega-nın daha çox pini və yüksək performansı daha mürəkkəb sistemləri idarə etməyə imkan verir. Beləliklə, Arduino Mega robotumuz üçün daha uyğun bir seçim oldu.
 
 * E18-D80NK Ir sensors <a class="anchor" id="irsensors"></a>
 
 ![ir222](https://github.com/user-attachments/assets/ee5489d9-d60a-482e-b7aa-b3b7e78ee29f)
 
-As you know, ultrasonics measure the distance with sound waves. because the sound wave form is less than the light form, it caused us many problems. we used it accordingly. now we use both ultrasonic sensor and E18-D80NK Ir sensors in the robot. These sensors provide data faster and work without delay.
+
+Bildiyiniz kimi, ultrasəs sensorları məsafəni səs dalğaları vasitəsilə ölçür. Lakin səs dalğalarının yayılma sürəti işıq dalğalarından xeyli az olduğu üçün bu, müəyyən problemlərə səbəb olurdu. Hazırda robotumuzda həm ultrasəs sensorlarından, həm də E18-D80NK IR sensorlarından istifadə edirik. Bu IR sensorlar məlumatları daha sürətli və dəqiq şəkildə təmin edir, gecikməsiz işləməklə performansı daha da artırır.
 
 ### Power Managament <a class="anchor" id="power"></a>
 
 ![battery1](https://github.com/user-attachments/assets/c83aaf44-5204-45be-8c09-ef02d80060a1)
 ![bat2](https://github.com/user-attachments/assets/ea9d6417-f4a9-4d5d-9c05-b6b975955388)
 
-
-We used Cylindrical Lithium Polymer Battery 3.7V 18650 Rechargeable Lipo Battery as a battery. We use 3 units of this battery and it gives us approximately 11v energy. We connect the 11v driver and get 5v energy from the output of the driver. This energy is enough for the sensors to work properly. Also, since these batteries are not very heavy, they help the robot to work faster. batareyalarin her biri 47.5gramdir.
+Robotumuzda enerji mənbəyi kimi Silindrik Litium Polimer 3.7V 18650 təkrar doldurulan Lipo batareyalarından istifadə edirik. Üç batareyanı birləşdirərək təxminən 11V enerji əldə edirik. Bu gərginlik sürücüyə qoşulur və sürücünün çıxışından sensorların düzgün işləməsi üçün lazım olan 5V enerji təmin olunur. Hər bir batareyanın çəkisi cəmi 47.5 qram olduğu üçün robot yüngül qalır və daha sürətli hərəkət edə bilir. Bu batareyalar həm effektiv, həm də praktiki bir həll təmin edir.
 
 ### Robot Photos <a class="anchor" id="robotphotos"></a>
 
@@ -220,6 +224,11 @@ We used Cylindrical Lithium Polymer Battery 3.7V 18650 Rechargeable Lipo Battery
 | <img src="./Team-photos/team-photo1.jpg" width="90%" /> |
 | :--: | 
 | *Normal Team Photo* | 
+
+### Design and 3D models
+
+
+
 
 ## Codes <a class="anchor" id="code"></a>
 
