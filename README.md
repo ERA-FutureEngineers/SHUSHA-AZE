@@ -19,7 +19,7 @@
 
 Pixy 2.1-ni seçməyimizin əsas səbəbi onun yüksək performansı və gecikməz işləmə qabiliyyətidir. Əvvəlcə ESP CAM istifadə etməyi düşünmüşdük, amma onun görüntü işləmə qabiliyyətinin zəif olduğunu və gecikmələrin mövcud olduğunu öyrəndikdən sonra Pixy 2.1-ə keçdik. Pixy 2.1, rəngləri tanımaq və obyektləri izləmək üçün xüsusi hazırlanmış bir görüntü işləmə sensorudur.Pixy 2.1, həmçinin müxtəlif proqramlaşdırma platformaları ilə inteqrasiya oluna bilir və Arduino, Raspberry Pi, STM32 və digər mikrokontrollerlərə asanlıqla qoşula bilər. Pixy 2.1, həmçinin çox sayda obyekt tanıma və izləmə funksiyalarını eyni anda yerinə yetirə bilir. Ona görə də bu camera bizim üçün çox əlverişlidir.Pixy 2.1-in digər bizim üçün lazım olan üstünlüklərindən biri də onun anlaşılan interfeysidir. O, həmçinin USB, UART, I2C və SPI kimi bir çox əlaqə protokollarını dəstəkləyir, bu da onu hər cür mikrokontrollerlə və digər elektronika komponentləri ilə rahat inteqrasiya etməyə imkan verir. Beləliklə, Pixy 2.1-i seçməyimiz robotumuzun daha dəqiq və sürətli görüntü işləmə təmin etdi.
 
-#### Biz bu kodda pixyle kub arasindaki mesafeni olcuruk
+### Biz bu kodda pixyle kub arasindaki mesafeni olcuruk
 
 ```ino
 #include <Pixy2.h>
@@ -59,7 +59,7 @@ void loop() {
 Gyro sensordan istifadə etmək üçün əvvəlcə MPU6050.h kitabxanasını layihəyə daxil etməliyik. Bu kitabxana, MPU6050 sensorunun funksiyalarını idarə etmək və məlumatlarını oxumaq üçün lazımdır. Robotu yandirdiqdan sonra , sensorun dəqiq işləməsi üçün ilkin olaraq 5 saniyəlik bir zaman aralığı veririk. Bu zaman ərzində sensorun özünü düzgün kalibrləməsinə və mümkün səhvlərini minimuma endirməsinə imkan veririk. Beləliklə, sensorun doğru məlumatları əldə etməsi və düzgün işləməsi, robotun performansını artırır və düzgün idarə edilməsini təmin edir.
 
 
-#### Bu kod gyro ile derece olcmek ucundur.
+### Bu kod gyro ile derece olcmek ucundur.
 ```ino
 void updateGyroAngle() {
   int16_t gz;
@@ -77,7 +77,7 @@ void updateGyroAngle() {
 
 ```
 
-#### Robotu merkezde saxlamaq robotu duzeltmek ucun kod
+### Robotu merkezde saxlamaq robotu duzeltmek ucun kod
 ```ino
 void Gyro() {
   if (currentAngle - 5 > targetAngle) {
@@ -100,7 +100,7 @@ void Gyro() {
 Biz layihədə L298N və 2 DC dişli mühərrik sürücüsündən istifadə etdik. Bu sürücü sabit cərəyan mühərrikləri ilə uyğun işləyir və layihəmizdə heç bir problem yaratmır. L298N, mühərriklərin fırlanma yönünü idarə etmək və lazım olan gücü vermək üçün yaxşı bir həll təklif edir. L298N, mühərrikləri sürətli və etibarlı şəkildə idarə etməyə kömək edir.
 
 
-#### bu motorlari xodlamaq ucun koddur
+### bu motorlari xodlamaq ucun koddur
 ```ino
 #define LEFT_MOTOR_PWM 5
 #define RIGHT_MOTOR_PWM 6
@@ -143,7 +143,7 @@ Robotumuzun dönmə sistemi servo və gyro sensorunun birgə işləməsi ilə t�
   
 ![ultra-s222](https://github.com/user-attachments/assets/b5a9c8c8-3723-4640-bd6a-d485d4359abd)
 
-#### biz bu kod vasitesile mesacfeni olcuruk.
+### biz bu kod vasitesile mesacfeni olcuruk.
 ```ino
 const int leftTrigPin = A6;
 const int leftEchoPin = A7;
@@ -228,7 +228,7 @@ Robotumuzda enerji mənbəyi kimi Silindrik Litium Polimer 3.7V 18650 təkrar do
 ### Design and 3D models
 
 
-
+Bu şəkildə robotun steering sistemini göstərmisik. Sistemin mərkəzində bir servo motor var və bu servo təkərlərin hər iki tərəfə idarə olunmasını təmin edən əlaqə mexanizmi idarə edir. Çubuq əlaqələri servo motorun dönmə dərəcəsinə baxaraq təkərləri sola və ya sağa idarə etmək üçün nəzərdə tutulmuşdur. Təkərlər sistemi dəstəkləyən güclü və möhkəm qoşma nöqtələri ilə robot şassisinə quraşdırılmışdır. Bu mexanizm dəqiq sükan üçün idealdır və servo motorun sürətli reaksiyası sayəsində yüksək manevr imkanı təqdim edir.
 
 ## Codes <a class="anchor" id="code"></a>
 
