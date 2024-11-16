@@ -14,23 +14,24 @@
    
 ![pixy222](https://github.com/user-attachments/assets/ea5298ed-464a-4901-aa05-9aa7c3aeb38f)
 
-pixyni secmekde esas meqsedimiz onun yuksek goruntu islemesi ve gecikme olmamasi idi. Biz ilk once esp cam istifade etmeyi dusunurduk lakin onun goruntu isleme suretinin zeif oldugunu bildikden sonra biz pixye kecdik. pixyni arduino ve yaxud basqa mikrocontrollere qosmaq cox rahatdir.
+Our main goal in choosing the pixy was its high performance and no lag. At first we were thinking of using esp cam, but after we found out that its image processing is weak, we switched to pixabay. It is very easy to connect the pixy to arduino or other microcontroller.
 * MPU6050
 
 ![mpu222](https://github.com/user-attachments/assets/70847a97-fe15-469f-8533-9a55b9ff14db)
 
 
-Gyro sensordan istifadə etmək üçün MPU6050.h kitabxanasını daxil etməliyik. baslayarken sensorun errorunu olcmek ucun 5 saniyelik zaman vermisik. bu da robotun daha deqiq ve duzgun islemeyine komek olur
+To use the gyro sensor, we need to include the MPU6050.h library. We have given 5 seconds time to measure the error of the sensor while starting. This helps the robot to work more accurately and correctly
+
 * Driver L298N
 
 ![driverl298n-222](https://github.com/user-attachments/assets/b9b312d4-a93b-4e89-94e5-a0e05b13fd90)
 
- biz layihede l298n driverinden istifade etmisik. bu driver dc motorlar ile unikal isleyir ve bizim ucun hec bir problem yaratmir
+We used the l298n driver in the project. This driver works uniquely with dc motors and doesn't cause any problems for us.
 * Servo
 
 ![servo222](https://github.com/user-attachments/assets/75496dab-44af-484e-960c-b52d35b29692)
 
-biz donmeni servo vasitesile etmisik. servo ile gyronu konfiqurasiya edib robotun daha deqiq islemesini temin etmisik
+We have done the freezing with servo means. We have configured the servo and gyro and ensured the robot works more accurately.
 
 * Dc motors
 
@@ -42,6 +43,44 @@ biz donmeni servo vasitesile etmisik. servo ile gyronu konfiqurasiya edib robotu
 ![ultra-s222](https://github.com/user-attachments/assets/b5a9c8c8-3723-4640-bd6a-d485d4359abd)
 
 ultrasonic sensorlar bize zaman-zaman problem yaratsada biz o problemleri muxtelif yollarla asmaqa calisidiq. biz yarisa az qalmis tof sensorundan istifade etmek istedik lakin onu alib, konfiqurasiya etmeye yeterince vaxtimiz olmadigindan biz yene de ultrasonicle davam etdik.
+
+biz bu kod vasitesile mesacfeni olcuruk.
+const int leftTrigPin = A6;
+const int leftEchoPin = A7;
+const int rightTrigPin = A0;
+const int rightEchoPin = A1;
+
+long getDistance(int trigPin, int echoPin) {
+  digitalWrite(trigPin, LOW);
+  delayMicroseconds(2);
+  digitalWrite(trigPin, HIGH);
+  delayMicroseconds(10);
+  digitalWrite(trigPin, LOW);
+
+  long duration = pulseIn(echoPin, HIGH);
+  long distance = duration * 0.034 / 2;
+
+  return distance;
+}
+
+void setup() {
+  pinMode(leftTrigPin, OUTPUT);
+  pinMode(leftEchoPin, INPUT);
+  pinMode(rightTrigPin, OUTPUT);
+  pinMode(rightEchoPin, INPUT);
+  Serial.begin(9600);
+}
+
+void loop() {
+  long leftDistance = getDistance(leftTrigPin, leftEchoPin);
+  long rightDistance = getDistance(rightTrigPin, rightEchoPin);
+  Serial.print(leftDistance);
+  Serial.print(" cm, Right: ");
+  Serial.print(rightDistance); 
+  Serial.println(" cm");
+  delay(10);
+}
+
 
 * Arduino Mega 2560 Rev3
 
