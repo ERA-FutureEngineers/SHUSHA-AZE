@@ -5,7 +5,7 @@
 *  [Second Raund]
 * [Components](#components)
 * Design
-* Robot Photos
+* Robot Photos(#robo-photos)
 * Scheme
 * TeamPhoto
 
@@ -161,7 +161,7 @@ biz ilk once arduino uno istifade edirdik .lakin robotu inkisaf etdirdikce senso
 
 biz bu sensorlardan ona gore istifade etdik ki 2ci raundda xeritede coxlu kubikler oldugu zaman ultrasonic duzgun data vermirdi ve buna gore de robot duzgun islemir ve deyirdi. bu sensorlari isletmek isimize cox yaradi .
   
-### Robot Photos
+### Robot Photos <a class="anchor" id="robo-photos"></a>
 
 | <img src="./Robot-photos/Robot_Left.jpg" width="90%" /> | <img src="./Robot-photos/Robot_Right.jpg" width="85%" /> | 
 | :--: | :--: | 
