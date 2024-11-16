@@ -227,6 +227,8 @@ Robotumuzda enerji mənbəyi kimi Silindrik Litium Polimer 3.7V 18650 təkrar do
 
 ### Design and 3D models
 
+![steerin servo](https://github.com/user-attachments/assets/f6b871ea-1513-4f6d-8857-a615cf10e4f5)
+
 
 Bu şəkildə robotun steering sistemini göstərmisik. Sistemin mərkəzində bir servo motor var və bu servo təkərlərin hər iki tərəfə idarə olunmasını təmin edən əlaqə mexanizmi idarə edir. Çubuq əlaqələri servo motorun dönmə dərəcəsinə baxaraq təkərləri sola və ya sağa idarə etmək üçün nəzərdə tutulmuşdur. Təkərlər sistemi dəstəkləyən güclü və möhkəm qoşma nöqtələri ilə robot şassisinə quraşdırılmışdır. Bu mexanizm dəqiq sükan üçün idealdır və servo motorun sürətli reaksiyası sayəsində yüksək manevr imkanı təqdim edir.
 
