@@ -93,17 +93,44 @@ To use the gyro sensor, we need to include the MPU6050.h library. We have given 
 ![driverl298n-222](https://github.com/user-attachments/assets/b9b312d4-a93b-4e89-94e5-a0e05b13fd90)
 ![dc-motors222](https://github.com/user-attachments/assets/86ba6389-0e62-4d51-9de1-91c468af46a2)
 
+bu motorlari xodlamaq ucun koddur
+```ino
+#define LEFT_MOTOR_PWM 5
+#define RIGHT_MOTOR_PWM 6
+#define LEFT_MOTOR_DIR1 14
+#define LEFT_MOTOR_DIR2 15
+#define RIGHT_MOTOR_DIR1 16
+#define RIGHT_MOTOR_DIR2 17
+
+void setup() {
+  pinMode(LEFT_MOTOR_PWM, OUTPUT);
+  pinMode(RIGHT_MOTOR_PWM, OUTPUT);
+  pinMode(LEFT_MOTOR_DIR1, OUTPUT);
+  pinMode(LEFT_MOTOR_DIR2, OUTPUT);
+  pinMode(RIGHT_MOTOR_DIR1, OUTPUT);
+  pinMode(RIGHT_MOTOR_DIR2, OUTPUT);
+
+  moveForward(70);
+}
+
+void loop() {
+}
+
+void moveForward(int speed) {
+  digitalWrite(LEFT_MOTOR_DIR1, HIGH);
+  digitalWrite(LEFT_MOTOR_DIR2, LOW);
+  digitalWrite(RIGHT_MOTOR_DIR1, HIGH);
+  digitalWrite(RIGHT_MOTOR_DIR2, LOW);
+  analogWrite(LEFT_MOTOR_PWM, speed);
+  analogWrite(RIGHT_MOTOR_PWM, speed);
+}
+```
 We used the L298N and 2 Dc gear motors driver in the project. This driver works uniquely with dc motors and doesn't cause any problems for us.
 * Servo
 
 ![servo222](https://github.com/user-attachments/assets/75496dab-44af-484e-960c-b52d35b29692)
 
 We have done the freezing with servo means. We have configured the servo and gyro and ensured the robot works more accurately.
-
-* Dc motors
-
-![dc-motors222](https://github.com/user-attachments/assets/86ba6389-0e62-4d51-9de1-91c468af46a2)
-
 
 * Ultrasonic sensors
   
