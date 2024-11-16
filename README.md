@@ -45,6 +45,7 @@ We have done the freezing with servo means. We have configured the servo and gyr
 ultrasonic sensorlar bize zaman-zaman problem yaratsada biz o problemleri muxtelif yollarla asmaqa calisidiq. biz yarisa az qalmis tof sensorundan istifade etmek istedik lakin onu alib, konfiqurasiya etmeye yeterince vaxtimiz olmadigindan biz yene de ultrasonicle davam etdik.
 
 biz bu kod vasitesile mesacfeni olcuruk.
+'''ino
 const int leftTrigPin = A6;
 const int leftEchoPin = A7;
 const int rightTrigPin = A0;
