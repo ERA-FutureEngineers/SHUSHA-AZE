@@ -151,14 +151,14 @@ void loop() {
 
 ![mega222](https://github.com/user-attachments/assets/acd3ee99-1cf3-49d2-a23e-a3e3defd6a00)
 
-biz ilk once arduino uno istifade edirdik .lakin robotu inkisaf etdirdikce sensorlar coxaldi ve sensorlar ucun pin yeri qalmadi ve bizde arduino megaya kecmek qerarina geldik . Arduino mega bir cox ozelliyine gore unodan cox qabaqdadir. 
+At first we were using arduino uno, but as we developed the robot, the sensors increased and there was no place for the pins for the sensors, and we decided to switch to the arduino mega. Arduino mega is far ahead of uno in terms of many features.
 
 * E18-D80NK Ir sensors <a class="anchor" id="irsensors"></a>
 
 ![ir222](https://github.com/user-attachments/assets/ee5489d9-d60a-482e-b7aa-b3b7e78ee29f)
 
-bildiyiniz kimi ultrasonicler ses dalgasi ile mesafeni olcur. ses dalgasi sureti isiq suretinden az oldugu ucun bize bezi problemler cixarirdi. bizde ona gore istifade etdik . indi robotda hem ultrasonic sensor hemde E18-D80NK Ir sensorlardan istifade edirik. Bu sensorlar daha tez data verir ve gecikme yasamadan  isleyir.
-  
+As you know, ultrasonics measure the distance with sound waves. because the sound wave form is less than the light form, it caused us many problems. we used it accordingly. now we use both ultrasonic sensor and E18-D80NK Ir sensors in the robot. These sensors provide data faster and work without delay.
+
 ### Robot Photos <a class="anchor" id="robotphotos"></a>
 
 | <img src="./Robot-photos/Robot_Left.jpg" width="90%" /> | <img src="./Robot-photos/Robot_Right.jpg" width="85%" /> | 
