@@ -2,6 +2,7 @@
  ### movzular
 
 * [Electronic-Components](#components)
+   * [Power Managament](#power)
 * [Robot Photos](#robotphotos)
 * [Power Managament](#power)
 * [Scheme](#scheme)
