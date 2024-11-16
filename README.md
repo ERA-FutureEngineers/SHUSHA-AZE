@@ -134,4 +134,7 @@ biz bu sensorlardan ona gore istifade etdik ki 2ci raundda xeritede coxlu kubikl
 | <img src="./Robot-photos/Robot_Left.jpg" width="90%" /> | <img src="./Robot-photos/Robot_Right.jpg" width="85%" /> | 
 | :--: | :--: | 
 | *Left* | *Right* |
+| <img src="./Robot-photos/Robot_Front.jpg" width="90%" /> | <img src="./Robot-photos/Robot_Back.jpg" width="85%" /> | 
+| :--: | :--: | 
+| *Front* | *Back* |
 
