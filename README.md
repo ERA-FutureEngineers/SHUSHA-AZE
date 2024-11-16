@@ -108,8 +108,7 @@ We have done the freezing with servo means. We have configured the servo and gyr
   
 ![ultra-s222](https://github.com/user-attachments/assets/b5a9c8c8-3723-4640-bd6a-d485d4359abd)
 
-ultrasonic sensorlar bize zaman-zaman problem yaratsada biz o problemleri muxtelif yollarla asmaqa calisidiq. biz yarisa az qalmis tof sensorundan istifade etmek istedik lakin onu alib, konfiqurasiya etmeye yeterince vaxtimiz olmadigindan biz yene de ultrasonicle davam etdik.
-
+bildiyiniz kimi ultrasonicler ses dalgasi ile mesafeni olcur. ses dalgasi sureti isiq suretinden az oldugu ucun bize bezi problemler cixarirdi. bizde ona gore [E18-D80NK Ir sensors](#irsensors) istifade etdik . indi robotda hem ultrasonic sensor hemde E18-D80NK Ir sensorlardan istifade edirik
 biz bu kod vasitesile mesacfeni olcuruk.
 ```ino
 const int leftTrigPin = A6;
@@ -155,7 +154,7 @@ void loop() {
 
 biz ilk once arduino uno istifade edirdik .lakin robotu inkisaf etdirdikce sensorlar coxaldi ve sensorlar ucun pin yeri qalmadi ve bizde arduino megaya kecmek qerarina geldik . Arduino mega bir cox ozelliyine gore unodan cox qabaqdadir.
 
-* E18-D80NK Ir sensors
+* E18-D80NK Ir sensors <a class="anchor" id="irsensors"></a>
 
 ![ir222](https://github.com/user-attachments/assets/ee5489d9-d60a-482e-b7aa-b3b7e78ee29f)
 
