@@ -1,14 +1,15 @@
 # SHUSHA-AZE 2024
  ### movzular
+
+* [Electronic-Components](#components)
+* [Robot Photos](#robotphotos)
+* [Power Managament](#power)
+* [Scheme](#scheme)
+* [TeamPhoto](#tphoto)
 * [Codes](#code)
   * [First Raund](#code)
   * [Second Raund]
-* [Electronic-Components](#components)
 * Design
-* [Robot Photos](#robotphotos)
-* [Scheme](#scheme)
-* [Power Managament](#power)
-* [TeamPhoto](#tphoto)
 
 ### Electronic-Components <a class="anchor" id="components"></a>
 * Pixy2.1 cam  
@@ -198,17 +199,17 @@ As you know, ultrasonics measure the distance with sound waves. because the soun
 | <img src="./Robot-photos/Robot_Up.jpg" width="90%" /> | <img src="./Robot-photos/Robot_Downjpg.jpg" width="85%" /> | 
 | *Up* | *Down* |
 
-### Scheme <a class="anchor" id="scheme"></a>
-
-| <img src="./Scheme/scheme-robot.jpg" width="90%" /> | <img src="./Scheme/scheme-robot2.jpg" width="85%" /> | 
-| :--: | :--: | 
-| *Scheme* | *Circuit diagram* |
-
 ### Power Managament <a class="anchor" id="power"></a>
 
 
 
 We used Cylindrical Lithium Polymer Battery 3.7V 18650 Rechargeable Lipo Battery as a battery. We use 3 units of this battery and it gives us approximately 11v energy. We connect the 11v driver and get 5v energy from the output of the driver. This energy is enough for the sensors to work properly. Also, since these batteries are not very heavy, they help the robot to work faster
+
+### Scheme <a class="anchor" id="scheme"></a>
+
+| <img src="./Scheme/scheme-robot.jpg" width="90%" /> | <img src="./Scheme/scheme-robot2.jpg" width="85%" /> | 
+| :--: | :--: | 
+| *Scheme* | *Circuit diagram* |
 
 ### TeamPhoto <a class="anchor" id="tphoto"></a>
 
