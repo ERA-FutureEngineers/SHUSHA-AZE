@@ -170,3 +170,6 @@ bildiyiniz kimi ultrasonicler ses dalgasi ile mesafeni olcur. ses dalgasi sureti
 | *Up* | *Down* |
 
 ### Scheme <a class="anchor" id="scheme"></a>
+
+| <img src="./Robot-photos/Robot_Left.jpg" width="90%" /> | <img src="./Robot-photos/Robot_Right.jpg" width="85%" /> | 
+| *Scheme* | *Circuit diagram* |
