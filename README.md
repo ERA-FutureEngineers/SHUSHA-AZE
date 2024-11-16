@@ -6,7 +6,7 @@
 * [Components](#components)
 * Design
 * [Robot Photos](#robotphotos)
-* Scheme
+* [Scheme](#scheme)
 * TeamPhoto
 
 ### Components <a class="anchor" id="components"></a>
@@ -108,7 +108,6 @@ We have done the freezing with servo means. We have configured the servo and gyr
   
 ![ultra-s222](https://github.com/user-attachments/assets/b5a9c8c8-3723-4640-bd6a-d485d4359abd)
 
-bildiyiniz kimi ultrasonicler ses dalgasi ile mesafeni olcur. ses dalgasi sureti isiq suretinden az oldugu ucun bize bezi problemler cixarirdi. bizde ona gore [E18-D80NK Ir sensors](#irsensors) istifade etdik . indi robotda hem ultrasonic sensor hemde E18-D80NK Ir sensorlardan istifade edirik
 biz bu kod vasitesile mesacfeni olcuruk.
 ```ino
 const int leftTrigPin = A6;
@@ -152,13 +151,13 @@ void loop() {
 
 ![mega222](https://github.com/user-attachments/assets/acd3ee99-1cf3-49d2-a23e-a3e3defd6a00)
 
-biz ilk once arduino uno istifade edirdik .lakin robotu inkisaf etdirdikce sensorlar coxaldi ve sensorlar ucun pin yeri qalmadi ve bizde arduino megaya kecmek qerarina geldik . Arduino mega bir cox ozelliyine gore unodan cox qabaqdadir.
+biz ilk once arduino uno istifade edirdik .lakin robotu inkisaf etdirdikce sensorlar coxaldi ve sensorlar ucun pin yeri qalmadi ve bizde arduino megaya kecmek qerarina geldik . Arduino mega bir cox ozelliyine gore unodan cox qabaqdadir. 
 
 * E18-D80NK Ir sensors <a class="anchor" id="irsensors"></a>
 
 ![ir222](https://github.com/user-attachments/assets/ee5489d9-d60a-482e-b7aa-b3b7e78ee29f)
 
-biz bu sensorlardan ona gore istifade etdik ki 2ci raundda xeritede coxlu kubikler oldugu zaman ultrasonic duzgun data vermirdi ve buna gore de robot duzgun islemir ve deyirdi. bu sensorlari isletmek isimize cox yaradi .
+bildiyiniz kimi ultrasonicler ses dalgasi ile mesafeni olcur. ses dalgasi sureti isiq suretinden az oldugu ucun bize bezi problemler cixarirdi. bizde ona gore istifade etdik . indi robotda hem ultrasonic sensor hemde E18-D80NK Ir sensorlardan istifade edirik. Bu sensorlar daha tez data verir ve gecikme yasamadan  isleyir.
   
 ### Robot Photos <a class="anchor" id="robotphotos"></a>
 
@@ -169,3 +168,5 @@ biz bu sensorlardan ona gore istifade etdik ki 2ci raundda xeritede coxlu kubikl
 | *Front* | *Back* |
 | <img src="./Robot-photos/Robot_Up.jpg" width="90%" /> | <img src="./Robot-photos/Robot_Downjpg.jpg" width="85%" /> | 
 | *Up* | *Down* |
+
+### Scheme <a class="anchor" id="scheme"></a>
