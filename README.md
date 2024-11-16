@@ -1,7 +1,7 @@
 # SHUSHA-AZE 2024
  ### movzular
 * [Codes](#code)
-  * [First Raund](#code1)
+  * [First Raund](#code)
 *   [Second Raund]
 * [Electronic-Components](#components)
 * Design
