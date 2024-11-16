@@ -3,13 +3,13 @@
 * [Codes]
 *  [First Raund]
 *  [Second Raund]
-* [Components](#components)
+* [Electronic-Components](#components)
 * Design
 * [Robot Photos](#robotphotos)
 * [Scheme](#scheme)
 * [TeamPhoto](#tphoto)
 
-### Components <a class="anchor" id="components"></a>
+### Electronic-Components <a class="anchor" id="components"></a>
 * Pixy2.1 cam  
    
 ![pixy222](https://github.com/user-attachments/assets/ea5298ed-464a-4901-aa05-9aa7c3aeb38f)
@@ -178,3 +178,6 @@ As you know, ultrasonics measure the distance with sound waves. because the soun
 
 ### TeamPhoto <a class="anchor" id="tphoto"></a>
 
+| <img src="./Team-photos/team-photo1.jpg" width="90%" /> |
+| :--: | 
+| *Normal Team Photo* | 
