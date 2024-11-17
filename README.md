@@ -328,7 +328,7 @@ Bu şəkildə robotun steering sistemini göstərmisik. Sistemin mərkəzində b
 
 ## Codes <a class="anchor" id="code"></a>
 
-### First raund final code <a class="anchor" id="code1st"></a>
+### First raund code <a class="anchor" id="code1st"></a>
 ```ino
 #include <Servo.h>
 #include <Pixy2.h>
