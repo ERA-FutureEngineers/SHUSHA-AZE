@@ -221,9 +221,9 @@ Robotumuzda enerji mənbəyi kimi Silindrik Litium Polimer 3.7V 18650 təkrar do
 
 ### Performance video of our robot <a class="anchor" id="pvideo"></a>
 
- **First raund**-[Youtube](https://youtube.com/shorts/uLJBHBSP7dw)
+ **First raund test code**-[Youtube](https://youtube.com/shorts/uLJBHBSP7dw)
  
- **Second raund**-[Youtube](https://youtu.be/JucIEC5qJes)
+ **Second raund test code**-[Youtube](https://youtu.be/JucIEC5qJes)
 
 ### TeamPhoto <a class="anchor" id="tphoto"></a>
 
