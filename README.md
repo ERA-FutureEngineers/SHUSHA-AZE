@@ -143,7 +143,7 @@ Robotumuzun dönmə sistemi servo və gyro sensorunun birgə işləməsi ilə t�
   
 ![ultra-s222](https://github.com/user-attachments/assets/b5a9c8c8-3723-4640-bd6a-d485d4359abd)
 
-### biz bu kod vasitesile mesacfeni olcuruk.
+### mesafe olcme kodu
 ```ino
 const int leftTrigPin = A6;
 const int leftEchoPin = A7;
@@ -219,9 +219,11 @@ Robotumuzda enerji mənbəyi kimi Silindrik Litium Polimer 3.7V 18650 təkrar do
 | :--: | :--: | 
 | *Scheme* | *Circuit diagram* |
 
-### Performance video of our robot 
- First raund-[Youtube](https://youtube.com/shorts/uLJBHBSP7dw)
- Second raund-[Youtube](https://youtu.be/JucIEC5qJes)
+### Performance video of our robot <a class="anchor" id="pvideo"></a>
+
+ **First raund**-[Youtube](https://youtube.com/shorts/uLJBHBSP7dw)
+ 
+ **Second raund**-[Youtube](https://youtu.be/JucIEC5qJes)
 
 ### TeamPhoto <a class="anchor" id="tphoto"></a>
 
