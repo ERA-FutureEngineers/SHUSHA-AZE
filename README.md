@@ -1,5 +1,5 @@
 # SHUSHA-AZE 2024
- ### movzular
+ ## movzular
 
 * [Electronic-Components](#components)
    * [Power Managament](#power)
@@ -7,10 +7,11 @@
 * [Performance video](#pvideo)
 * [Scheme](#scheme)
 * [TeamPhoto](#tphoto)
+* [Steering system](#system)
 * [Codes](#code)
   * [First Raund](#code)
   * [Second Raund]
-* Design
+    
 
 ### Electronic-Components <a class="anchor" id="components"></a>
 * Pixy2.1 cam  
@@ -231,7 +232,7 @@ Robotumuzda enerji mənbəyi kimi Silindrik Litium Polimer 3.7V 18650 təkrar do
 | :--: | 
 | *Normal Team Photo* | 
 
-### Design and 3D models
+### Steering system <a class="system" id="code"></a>
 
 ![steerin servo](https://github.com/user-attachments/assets/f6b871ea-1513-4f6d-8857-a615cf10e4f5)
 
