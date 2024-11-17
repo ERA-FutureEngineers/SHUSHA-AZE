@@ -4,11 +4,10 @@
 * [Electronic-Components](#components)
    * [Power Managament](#power)
 * [Robot Photos](#robotphotos)
-* [Power Managament](#power)
 * [Scheme](#scheme)
 * [TeamPhoto](#tphoto)
 * [Codes](#code)
-  * [First Raund](#code)
+  * [First Raund] (#code)
   * [Second Raund]
 * Design
 
