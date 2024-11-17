@@ -232,7 +232,7 @@ Robotumuzda enerji mənbəyi kimi Silindrik Litium Polimer 3.7V 18650 təkrar do
 | :--: | 
 | *Normal Team Photo* | 
 
-### Steering system <a class="system" id="code"></a>
+### Steering system <a class="anchor" id="system"></a>
 
 ![steerin servo](https://github.com/user-attachments/assets/f6b871ea-1513-4f6d-8857-a615cf10e4f5)
 
