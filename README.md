@@ -4,6 +4,7 @@
 * [Electronic-Components](#components)
    * [Power Managament](#power)
 * [Robot Photos](#robotphotos)
+* [Performance video](#pvideo)
 * [Scheme](#scheme)
 * [TeamPhoto](#tphoto)
 * [Codes](#code)
@@ -217,6 +218,10 @@ Robotumuzda enerji mənbəyi kimi Silindrik Litium Polimer 3.7V 18650 təkrar do
 | <img src="./Scheme/scheme-robot.jpg" width="90%" /> | <img src="./Scheme/scheme-robot2.jpg" width="85%" /> | 
 | :--: | :--: | 
 | *Scheme* | *Circuit diagram* |
+
+### Performance video of our robot 
+ First raund-[Youtube](https://youtube.com/shorts/uLJBHBSP7dw)
+ Second raund-[Youtube](https://youtu.be/JucIEC5qJes)
 
 ### TeamPhoto <a class="anchor" id="tphoto"></a>
 
