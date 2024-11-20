@@ -160,7 +160,7 @@ void Gyro() {
 
 In our project, we used the **L298N motor driver** and two DC gear motors. This driver works well with DC motors and does not cause any issues in our project.The L298N provides an effective solution for controlling the rotation direction of the motors and delivering the required power. It helps control the motors quickly and reliably.
 
-### bu motorlari xodlamaq ucun koddur
+### Code for turning the robot on
 ```ino
 #define LEFT_MOTOR_PWM 5
 #define RIGHT_MOTOR_PWM 6
