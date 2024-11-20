@@ -54,7 +54,7 @@ void loop() {
 }
 ```
 
-### pixyle kubun ustune getmek
+### Passing cubes with pixy
 
 ```ino
         pixy.ccc.getBlocks();
