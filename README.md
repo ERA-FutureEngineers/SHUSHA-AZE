@@ -291,7 +291,7 @@ In our robot, we use cylindrical Lithium Polymer 3.7V 18650 rechargeable LiPo ba
 | *Left* | *Right* |
 | <img src="./Robot-photos/Robot_Front.jpg" width="90%" /> | <img src="./Robot-photos/Robot_Back.jpg" width="85%" /> | 
 | *Front* | *Back* |
-| <img src="./Robot-photos/Robot_Up.jpg" width="90%" /> | <img src="./Robot-photos/Robot_Downjpg.jpg" width="85%" /> | 
+| <img src="./Robot-photos/Robot_Up.jpg" width="90%" /> | <img src="./Robot-photos/Robot_Down.jpg" width="85%" /> | 
 | *Up* | *Down* |
 
 
