@@ -118,7 +118,7 @@ void loop() {
 ![mpu222](https://github.com/user-attachments/assets/70847a97-fe15-469f-8533-9a55b9ff14db)
 
 To use the gyro sensor, we first need to include the **MPU6050.h** library in the project. This library is essential for managing the functions of the MPU6050 sensor and reading its data. 
-After powering on the robot, we allocate an initial 5-second time interval to ensure the sensor operates accurately. During this time, the sensor performs proper self-calibration and minimizes potential errors.As a result, obtaining accurate data from the sensor ensures improved performance and precise control of the robot.
+After powering on the robot, we allocate an initial 5-second time interval to ensure the sensor operates accurately. During this time, the sensor performs proper self-calibration and minimizes potential errors. As a result, obtaining accurate data from the sensor ensures improved performance and precise control of the robot.
 
 ### This code is for measuring degrees with a gyro.
 ```ino
