@@ -197,7 +197,7 @@ void moveForward(int speed) {
 
 ![servo222](https://github.com/user-attachments/assets/75496dab-44af-484e-960c-b52d35b29692)
 
-### Servo code
+### Servo code deyis
 ```ino
 #include <Servo.h>
 
