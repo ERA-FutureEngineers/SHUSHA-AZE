@@ -311,7 +311,7 @@ In our robot, we use cylindrical Lithium Polymer 3.7V 18650 rechargeable LiPo ba
 
 | <img src="./Team-photos/team-photo1.jpg" width="90%" /> |
 | :--: | 
-| *Normal Team Photo* | 
+| *Team Photo* | 
 
 ### Steering system <a class="anchor" id="system"></a>
 
