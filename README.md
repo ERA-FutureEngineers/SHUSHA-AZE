@@ -303,7 +303,7 @@ In our robot, we use cylindrical Lithium Polymer 3.7V 18650 rechargeable LiPo ba
 
 ### Performance video of our robot <a class="anchor" id="pvideo"></a>
 
- **First raund test code**-[Youtube](https://youtube.com/shorts/uLJBHBSP7dw)
+ **First raund performance video**-[Youtube](https://youtu.be/YPMOczcFkag)
  
  **Second raund test code**-[Youtube](https://youtu.be/JucIEC5qJes)
 
