@@ -10,7 +10,7 @@
    * [Arduino Mega 2560 Rev3](#mega)
    * [Power Managament](#power)
 * [Robot Photos](#robotphotos)
-* [Performance video](#pvideo)
+* [Performance videos](#pvideo)
 * [Scheme](#scheme)
 * [TeamPhoto](#tphoto)
 * [Steering system](#system)
@@ -307,7 +307,7 @@ In our robot, we use cylindrical Lithium Polymer 3.7V 18650 rechargeable Li-ion 
 | :--: | :--: | 
 | *Scheme* | *Circuit diagram* |
 
-### Performance video of our robot <a class="anchor" id="pvideo"></a>
+### Performance videos of our robot <a class="anchor" id="pvideo"></a>
 
  **First raund performance video**-[Youtube](https://youtu.be/YwKAwplRk-4)
  
