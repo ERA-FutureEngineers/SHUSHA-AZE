@@ -8,7 +8,7 @@
 * [Scheme](#scheme)
 * [TeamPhoto](#tphoto)
 * [Steering system](#system)
-* [Codes](#code)
+* [Logic of Codes](#code)
   * [First Round](#code)
   * [Second Round](#code2nd)
     
