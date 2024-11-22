@@ -284,7 +284,7 @@ Initially, we used an Arduino Uno in our robot. However, as the project develope
 
 ### Power Managament <a class="anchor" id="power"></a>
 
-![battery1](https://github.com/user-attachments/assets/c83aaf44-5204-45be-8c09-ef02d80060a1)
+(![battery555](https://github.com/user-attachments/assets/c5f13177-6d47-41bc-8dc5-40014c04668f)
 ![bat2](https://github.com/user-attachments/assets/ea9d6417-f4a9-4d5d-9c05-b6b975955388)
 
 In our robot, we use cylindrical Lithium Polymer 3.7V 18650 rechargeable Li-ion batteries as the power source. By combining three batteries, we obtain approximately 11V of power. This voltage is connected to the motor driver, and the driver’s output provides the 5V needed for the proper operation of the sensors. Since each battery weighs only 47.5 grams, the robot remains lightweight and can move faster. These batteries offer both an efficient and practical solution.
