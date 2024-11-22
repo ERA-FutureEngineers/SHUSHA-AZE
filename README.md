@@ -2,6 +2,12 @@
  ## Topics
 
 * [Electronic-Components](#components)
+   * [Pixy2.1 cam](#components)
+   * [MPU6050](#Gyro)
+   * [Servo](#servo)
+   * [Driver L298N and Dc motors](#driver)
+   * [Ultrasonic sensors](#ultrasonic)
+   * [Arduino Mega 2560 Rev3](#mega)
    * [Power Managament](#power)
 * [Robot Photos](#robotphotos)
 * [Performance video](#pvideo)
@@ -113,7 +119,7 @@ void loop() {
     }
 ```
     
-* MPU6050
+* MPU6050 <a class="anchor" id="Gyro"></a>
 
 ![mpu222](https://github.com/user-attachments/assets/70847a97-fe15-469f-8533-9a55b9ff14db)
 
@@ -153,7 +159,7 @@ void Gyro() {
 ```
 
 
-* Driver L298N and Dc motors
+* Driver L298N and Dc motors <a class="anchor" id="driver"></a>
 
 ![driverl298n-222](https://github.com/user-attachments/assets/b9b312d4-a93b-4e89-94e5-a0e05b13fd90)
 ![dc-motors222](https://github.com/user-attachments/assets/86ba6389-0e62-4d51-9de1-91c468af46a2)
@@ -193,7 +199,7 @@ void moveForward(int speed) {
 }
 ```
 
-* Servo
+* Servo  <a class="anchor" id="servo"></a>
 
 ![servo222](https://github.com/user-attachments/assets/75496dab-44af-484e-960c-b52d35b29692)
 
@@ -226,7 +232,7 @@ void loop() {
 
 The turning system of our robot is implemented through the combined operation of a servo and a gyro sensor. The gyro sensor measures the robot's turning angle and direction changes during movement and sends precise data to the servo. Based on this data, the servo operates accurately, ensuring the robot's turning is executed with greater precision.
 
-* Ultrasonic sensors
+* Ultrasonic sensors <a class="anchor" id="ultrasonics"></a>
   
 ![ultra-s222](https://github.com/user-attachments/assets/b5a9c8c8-3723-4640-bd6a-d485d4359abd)
 
@@ -269,7 +275,7 @@ void loop() {
 }
 ```
 
-* Arduino Mega 2560 Rev3
+* Arduino Mega 2560 Rev3 <a class="anchor" id="mega"></a>
 
 ![mega222](https://github.com/user-attachments/assets/acd3ee99-1cf3-49d2-a23e-a3e3defd6a00)
 
