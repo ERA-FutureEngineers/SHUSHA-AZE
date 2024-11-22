@@ -19,14 +19,14 @@
   * [Second Round](#code2nd)
     
 
-### Electronic-Components <a class="anchor" id="components"></a>
-* Pixy2.1 cam  
+## Electronic-Components <a class="anchor" id="components"></a>
+### Pixy2.1 cam  
    
 ![pixy222](https://github.com/user-attachments/assets/ea5298ed-464a-4901-aa05-9aa7c3aeb38f)
 
 The main reason we chose the Pixy 2.1 is its high performance and real-time processing capabilities. Initially, we considered using the ESP CAM, but after discovering its limited image processing capabilities and noticeable latency, we decided to switch to the Pixy 2.1. Pixy 2.1 is a specialized image processing sensor designed for recognizing colors and tracking objects. It can also integrate with various programming platforms and is easily connectable to Arduino, Raspberry Pi, STM32, and other microcontrollers. Moreover, Pixy 2.1 can simultaneously perform multiple object recognition and tracking functions, making it highly convenient for our needs. Another advantage of this camera is its user-friendly interface. It supports numerous communication protocols, such as USB, UART, I2C, and SPI, allowing seamless integration with any microcontroller and other electronic components. Therefore, choosing Pixy 2.1 has enabled our robot to achieve more precise and faster image processing.
 
-### Wth this code measure distance
+#### With this code measure distance
 
 ```ino
 #include <Pixy2.h>
@@ -60,7 +60,7 @@ void loop() {
 }
 ```
 
-### Passing cubes with pixy
+#### Passing cubes with pixy
 
 ```ino
         pixy.ccc.getBlocks();
@@ -119,14 +119,14 @@ void loop() {
     }
 ```
     
-* MPU6050 <a class="anchor" id="Gyro"></a>
+### MPU6050 <a class="anchor" id="Gyro"></a>
 
 ![mpu222](https://github.com/user-attachments/assets/70847a97-fe15-469f-8533-9a55b9ff14db)
 
 To use the gyro sensor, we first need to include the **MPU6050.h** library in the project. This library is essential for managing the functions of the MPU6050 sensor and reading its data. 
 After powering on the robot, we allocate an initial 5-second time interval to ensure the sensor operates accurately. During this time, the sensor performs proper self-calibration and minimizes potential errors. As a result, obtaining accurate data from the sensor ensures improved performance and precise control of the robot.
 
-### This code is for measuring degrees with gyro.
+#### This code is for measuring degrees with gyro.
 ```ino
 void updateGyroAngle() {
   int16_t gz;
@@ -144,7 +144,7 @@ void updateGyroAngle() {
 
 ```
 
-### Centering the robot with gyro
+#### Centering the robot with gyro
 ```ino
 void Gyro() {
   if (currentAngle - 5 > targetAngle) {
@@ -159,14 +159,14 @@ void Gyro() {
 ```
 
 
-* Driver L298N and Dc motors <a class="anchor" id="driver"></a>
+### Driver L298N and Dc motors <a class="anchor" id="driver"></a>
 
 ![driverl298n-222](https://github.com/user-attachments/assets/b9b312d4-a93b-4e89-94e5-a0e05b13fd90)
 ![dc-motors222](https://github.com/user-attachments/assets/86ba6389-0e62-4d51-9de1-91c468af46a2)
 
 In our project, we used the **L298N motor driver** and two DC gear motors. This driver works well with DC motors and does not cause any issues in our project.The L298N provides an effective solution for controlling the rotation direction of the motors and delivering the required power. It helps control the motors quickly and reliably.
 
-### Code for turning the robot on
+#### Code for turning the robot on
 ```ino
 #define LEFT_MOTOR_PWM 5
 #define RIGHT_MOTOR_PWM 6
@@ -199,11 +199,11 @@ void moveForward(int speed) {
 }
 ```
 
-* Servo  <a class="anchor" id="servo"></a>
+### Servo  <a class="anchor" id="servo"></a>
 
 ![servo222](https://github.com/user-attachments/assets/75496dab-44af-484e-960c-b52d35b29692)
 
-### Servo code deyis
+#### Servo code deyis
 ```ino
 #include <Servo.h>
 
@@ -232,11 +232,11 @@ void loop() {
 
 The turning system of our robot is implemented through the combined operation of a servo and a gyro sensor. The gyro sensor measures the robot's turning angle and direction changes during movement and sends precise data to the servo. Based on this data, the servo operates accurately, ensuring the robot's turning is executed with greater precision.
 
-* Ultrasonic sensors <a class="anchor" id="ultrasonics"></a>
+### Ultrasonic sensors <a class="anchor" id="ultrasonics"></a>
   
 ![ultra-s222](https://github.com/user-attachments/assets/b5a9c8c8-3723-4640-bd6a-d485d4359abd)
 
-### Distance measurement code
+#### Distance measurement code
 ```ino
 const int leftTrigPin = A6;
 const int leftEchoPin = A7;
@@ -275,7 +275,7 @@ void loop() {
 }
 ```
 
-* Arduino Mega 2560 Rev3 <a class="anchor" id="mega"></a>
+### Arduino Mega 2560 Rev3 <a class="anchor" id="mega"></a>
 
 ![mega222](https://github.com/user-attachments/assets/acd3ee99-1cf3-49d2-a23e-a3e3defd6a00)
 
