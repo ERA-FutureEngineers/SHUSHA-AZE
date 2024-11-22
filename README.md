@@ -6,7 +6,7 @@
    * [MPU6050](#Gyro)
    * [Servo](#servo)
    * [Driver L298N and Dc motors](#driver)
-   * [Ultrasonic sensors](#ultrasonic)
+   * [Ultrasonic sensors](#ultrasonics)
    * [Arduino Mega 2560 Rev3](#mega)
    * [Power Managament](#power)
 * [Robot Photos](#robotphotos)
