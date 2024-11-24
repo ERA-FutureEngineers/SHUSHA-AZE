@@ -203,30 +203,35 @@ void moveForward(int speed) {
 
 ![servo222](https://github.com/user-attachments/assets/75496dab-44af-484e-960c-b52d35b29692)
 
-#### Servo code deyis
+#### Servo code 
+
+This code takes the angle from the gyroscope and uses it to keep the robot balanced with a servo.
 ```ino
-#include <Servo.h>
+void updateGyroAngle() {
+  int16_t gz, ax, ay, az;
+  unsigned long currentTime = millis();
+  float deltaTime = (currentTime - previousTime) / 1000.0;
+  previousTime = currentTime;
 
-Servo myServo;
-int angle = 0;
-int step = 1;
-int direction = 1;
+  gz = gyro.getRotationZ();
 
-void setup() {
-  myServo.attach(2);
-  myServo.write(90);
-  delay(500);
+  float rotationZ = (gz / 131.0) - offsetZ;
+  if(abs(rotationZ * deltaTime) >= 0.1)
+  currentAngle += rotationZ * deltaTime;
+
+  Serial.print("Filtered Angle (Yaw): ");
+  Serial.println(currentAngle);
 }
 
-void loop() {
-  angle += step * direction;
-
-  if (angle >= 30 || angle <= -30) {
-    direction = -direction;
+void Gyro() {
+  if (currentAngle - 5 > targetAngle) {
+    servo_9.write(90 - angle);
+  } else if (currentAngle + 5 < targetAngle) {
+    servo_9.write(90 + angle);
+  } else {
+    servo_9.write(90);
   }
-
-  myServo.write(90 + angle);
-  delay(20);
+  updateGyroAngle();
 }
 ```
 
