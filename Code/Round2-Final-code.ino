@@ -9,15 +9,16 @@ MPU6050 gyro;
 
 float frontdist = 0, rightdist = 0, leftdist = 0;
 int objectWidth = 0;
-float knownWidth = 5.0, focalLength = 218, distance = 0;
+float knownWidth = 5.0, focalLength = 200, distance = 0;
 bool colorDetected = false;
-int targetAngle = 0;
+float targetAngle = 0;
 float currentAngle = 0;
 float offsetZ = 0;
 int angle = 20;
 float previousRotationZ = 0.0;
-
-int target = 30, L = 0, R = 0, old = 0, j = 0, count = 0, last_color = 0, old_last_color = 0, reverse = 0, height = 0, old1 = 1, old2 = 1, old3 = 1;
+int colorX = 0;
+int target = 30, L = 0, R = 0, old = 0, j = 0, count = 0, last_color = 0, old_last_color = 0, reverse = 0, height = 0, old1 = 1, old2 = 1, old3 = 1, secondcount = 0, second = 3000, gyro_count = 0;
+   bool greenDetected = false, redDetected = false;
 
 long readUltrasonicDistance(int triggerPin, int echoPin) {
   pinMode(triggerPin, OUTPUT);
@@ -61,8 +62,8 @@ void setup() {
   pinMode(15, OUTPUT);
   pinMode(17, OUTPUT);
   pinMode(14, OUTPUT);
-  analogWrite(5, 75);
-  analogWrite(6, 75);
+  analogWrite(5, 65);
+  analogWrite(6, 65);
   digitalWrite(14, HIGH);
   digitalWrite(16, HIGH);
   digitalWrite(15, LOW);
@@ -88,32 +89,32 @@ void loop() {
 
   if(R == 1 or L == 1){
     servo_9.write(90);
-    Backward();
-  analogWrite(5, 75);
-  analogWrite(6, 75);    
+    Stop();
+    delay(500);
+    Backward();    
     CautionMillis = millis();
     PreviousCautionMillis = millis();
     while(CautionMillis - PreviousCautionMillis <= 1000){
     CautionMillis = millis();
     updateGyroAngle();
     }
-  analogWrite(5, 65);
-  analogWrite(6, 65);
     Forward();
   }
 
   while (L == 1 || R == 1) {
     pixy.ccc.getBlocks();
-    bool greenDetected = false, redDetected = false, parkingDetected = false;  
-    int colorX = 0, k = 0, j = 0, old = 0, mx = 0;
+    bool parkingDetected = false;  
+    greenDetected = false, redDetected = false;
+    int k = 0, j = 0, old = 0, mx = 0;
+    colorX = 0;
     height = 0;
     for (int i = 0; i < pixy.ccc.numBlocks; i++) {
-      if(old <= (pixy.ccc.blocks[i].m_x) * (pixy.ccc.blocks[i].m_height)){
-        old = (pixy.ccc.blocks[i].m_x) * (pixy.ccc.blocks[i].m_height);
+      if(old <= (pixy.ccc.blocks[i].m_height)){
+        old = (pixy.ccc.blocks[i].m_height);
         j = i;
       }
     }
-      if(count >= 12 and pixy.ccc.blocks[j].m_signature == 3){
+      if(count >= 4 and pixy.ccc.blocks[j].m_signature == 3){
       parkingDetected = true;
       Parking();
       }
@@ -130,64 +131,9 @@ void loop() {
         objectWidth = pixy.ccc.blocks[j].m_width;
         height = pixy.ccc.blocks[j].m_height;
       }
-    
 
     MeasureDistance();
     distance = (knownWidth * focalLength) / objectWidth;
-
-    unsigned long currentMillis = millis(); 
-    if (currentMillis - previousMillis >= 3000 && leftdist >= 100 && rightdist < 100 and L == 1) { 
-      previousMillis = currentMillis;
-      targetAngle += 90;
-      angle = 35;
-      count++;
-    }
-
-    if (currentMillis - previousMillis >= 3000 && rightdist >= 100 && leftdist < 100 and R == 1) { 
-      previousMillis = currentMillis;
-      targetAngle -= 90;
-      angle = 35;
-      count++;
-    }
-
-    if (abs(currentAngle - targetAngle) <= 10) {
-      angle = 20;
-    }
-    old_last_color = last_color;
-
-    ReverseTurning();
-
-  if (redDetected) {
-    if ((R == 1 && abs(currentAngle - targetAngle) <= 35) || L == 1) {
-        updateGyroAngle();
-        last_color = 2;
-
-        if (colorX > 80) {
-            servo_9.write(65);
-        } else if (R == 1 && colorX < 40 && abs(currentAngle - targetAngle) >= 10) {
-            servo_9.write(115);
-        } else {
-            servo_9.write(90);
-      }
-    }
-  }
-  else if (greenDetected) {
-    if ((L == 1 && abs(currentAngle - targetAngle) <= 35) || R == 1) {
-        updateGyroAngle();
-        last_color = 1;
-
-        if (colorX < 220) {
-            servo_9.write(115);
-        } else if (L == 1 && colorX > 260 && abs(currentAngle - targetAngle) >= 10) {
-            servo_9.write(65);
-        } else {
-            servo_9.write(90);
-        }
-      }
-    }
-
-  else {
-    Gyro();
       if (rightdist <= 5) {
         while(rightdist <= 10){
         servo_9.write(115);
@@ -202,13 +148,35 @@ void loop() {
         delay(10);
         }
       }
+
+    unsigned long currentMillis = millis(); 
+    if (currentMillis - previousMillis >= 3000 && leftdist >= 100 && rightdist < 100 and L == 1) { 
+      previousMillis = currentMillis;
+      targetAngle += 89.5;
+      angle = 30;
+      count++;
     }
+
+    if (currentMillis - previousMillis >= 3000 && rightdist >= 100 && leftdist < 100 and R == 1) { 
+      previousMillis = currentMillis;
+      targetAngle -= 90.5;
+      angle = 30;
+      count++;
+    }
+
+    if (abs(currentAngle - targetAngle) <= 10) {
+      angle = 20;
+    }
+    if(greenDetected or redDetected)
+    ColorSearching();
+    else 
+    Gyro();
   }
 }
 
 void Forward() {
-  analogWrite(6, 75);
-  analogWrite(5, 75);
+  analogWrite(6, 65);
+  analogWrite(5, 65);
   digitalWrite(14, HIGH);
   digitalWrite(16, HIGH);
   digitalWrite(15, LOW);
@@ -230,8 +198,8 @@ void Stop() {
 }
 
 void Move() {
-  analogWrite(6, 75);
-  analogWrite(5, 75);
+  analogWrite(6, 65);
+  analogWrite(5, 65);
 }
 
 void MeasureDistance() {
@@ -239,6 +207,8 @@ void MeasureDistance() {
   delay(10);
   rightdist = 0.01723 * readUltrasonicDistance(A0, A1);
   delay(10);
+  // frontdist = 0.01723 * readUltrasonicDistance(A4, A5);
+  // delay(10);  
 }
 
 void updateGyroAngle() {
@@ -257,15 +227,17 @@ void updateGyroAngle() {
 }
 
 void Gyro() {
-  if (currentAngle - 5 > targetAngle) {
+  int deadzone = 5;
+  if (currentAngle > targetAngle + deadzone) {
     servo_9.write(90 - angle);
-  } else if (currentAngle + 5 < targetAngle) {
+  } else if (currentAngle < targetAngle - deadzone) {
     servo_9.write(90 + angle);
   } else {
     servo_9.write(90);
   }
   updateGyroAngle();
 }
+
 
 void calibrateGyro() {
   int numReadings = 200;
@@ -287,62 +259,150 @@ void calibrateGyro() {
   Serial.println(offsetZ);
 }
 
-void ReverseTurning() {
-    if(last_color == 2 and count == 8 and reverse == 0){
-      while(abs(currentAngle - targetAngle) >= 5){
-        Gyro();
-      }
-      angle = 25;
-      Backward();
-      targetAngle += 90;
-      analogWrite(5, 70);
-      analogWrite(6, 70);
-      while(abs(currentAngle - targetAngle) >= 5){
-        servo_9.write(60);
+void ColorSearching() {
+  if (redDetected) {
+    if ((R == 1 && abs(currentAngle - targetAngle) <= 35) || L == 1) {
         updateGyroAngle();
+        last_color = 2;
+
+        if (colorX > 50) {
+            servo_9.write(65);
+        } else if (R == 1 && colorX < 10 && abs(currentAngle - targetAngle) >= 10) {
+            servo_9.write(115);
+        } else {
+            servo_9.write(90);
       }
-      servo_9.write(90);
-      delay(500);
-      Forward();      
-      analogWrite(5, 65);
-      analogWrite(6, 65);
-      angle = 20;
-      if(L == 1){R = 1; L = 0;}
-      else if(R == 1){L = 1; R = 0;}
-      count = 100;
-      targetAngle += 90;
     }
-    else if(count == 8)
-    reverse = 1;
+    else
+    Gyro();
+  }
+  else if (greenDetected) {
+    if ((L == 1 && abs(currentAngle - targetAngle) <= 35) || R == 1) {
+        updateGyroAngle();
+        last_color = 1;
+        if (colorX < 230) {
+            servo_9.write(115);
+        } else if (L == 1 && colorX > 260 && abs(currentAngle - targetAngle) >= 10) {
+            servo_9.write(65);
+        } else {
+            servo_9.write(90);
+        }
+      }
+      else
+      Gyro();
+    }
 }
 
+// void ReverseTurning() {
+//     if(last_color == 2 and count == 8 and reverse == 0){
+//       while(abs(currentAngle - targetAngle) >= 5){
+//         Gyro();
+//       }
+//       angle = 25;
+//       Backward();
+//       targetAngle += 90;
+//       analogWrite(5, 70);
+//       analogWrite(6, 70);
+//       while(abs(currentAngle - targetAngle) >= 5){
+//         servo_9.write(60);
+//         updateGyroAngle();
+//       }
+//       servo_9.write(90);
+//       delay(500);
+//       Forward();      
+//       analogWrite(5, 65);
+//       analogWrite(6, 65);
+//       angle = 20;
+//       if(L == 1){R = 1; L = 0;}
+//       else if(R == 1){L = 1; R = 0;}
+//       count = 100;
+//       targetAngle += 90;
+//     }
+//     else if(count == 8)
+//     reverse = 1;
+// }
+
 void Parking() {
-  analogWrite(5, 60);
-  analogWrite(6, 60);
   bool parkingDetected = true;
+  secondcount = millis();
   
-  if (L == 1) {
-    unsigned long lastDetectionTime = millis(); // Record the time when the signature was last detected
+    unsigned long lastDetectionTime = millis();
+    int target = 42, Kp = 1.5, Kd = 0.3, err = 0, errold = 0, U = 0;
 
     while (parkingDetected) {
       pixy.ccc.getBlocks();
       MeasureDistance();
       int colorX = 0;
+      redDetected = false, greenDetected = false;
 
-      for (int i = 0; i < pixy.ccc.numBlocks; i++) {
-        if (pixy.ccc.blocks[i].m_signature == 3) {
-          colorX = pixy.ccc.blocks[i].m_x;
-          lastDetectionTime = millis(); // Reset the timer since signature 3 was detected
-        }
+    for (int i = 0; i < pixy.ccc.numBlocks; i++) {
+      if(old <= (pixy.ccc.blocks[i].m_height)){
+        old = (pixy.ccc.blocks[i].m_height);
+        j = i;
+      }
+    }
+      if (pixy.ccc.blocks[j].m_signature == 1) {
+        greenDetected = true;
+        colorX = pixy.ccc.blocks[j].m_x;
+      }
+      if (pixy.ccc.blocks[j].m_signature == 2) {
+        redDetected = true;
+        colorX = pixy.ccc.blocks[j].m_x;
+      }
+      if (pixy.ccc.blocks[j].m_signature == 3) {
+        lastDetectionTime = millis();
+        colorX = pixy.ccc.blocks[j].m_x;
       }
 
-      // Exit the loop if more than 1 second has passed without detecting signature 3
-      if (millis() - lastDetectionTime > 2000) {
+      if (millis() - lastDetectionTime > 1000) {
         parkingDetected = false;
       }
 
+    if(abs(currentAngle - targetAngle <= 20)){
+    if(greenDetected or redDetected)
+    ColorSearching();
+    else if(pixy.ccc.blocks[j].m_signature == 3){
+      // if(leftdist >= 50){
+      
+      // if(R == 1){
+      //     if (colorX > 40) {
+      //       servo_9.write(65);
+      //   } else if (colorX < 10 && abs(currentAngle - targetAngle) >= 10) {
+      //       servo_9.write(115);
+      //   } else {
+      //       servo_9.write(90);
+      //   }    
+      // }
+      // else if(L == 1){
+      //     if (colorX < 270) {
+      //       servo_9.write(115);
+      //   } else if (L == 1 && colorX > 300 && abs(currentAngle - targetAngle) >= 10) {
+      //       servo_9.write(70);
+      //   } else {
+      //       servo_9.write(90);
+      //       }      
+      //     }
+        // }
+        // else{
+        if(L == 1){
+          err = leftdist - target;
+          U = err * Kp + Kd * (err - errold);
+          if (90 + U > 120) {
+          servo_9.write(120);
+          }
+           else {
+          servo_9.write(90 + U);
+          }
+          errold = err;  
+         } 
+        }
+      }
+    else {
       Gyro();
+    }
+
     unsigned long currentMillis = millis(); 
+    if(currentMillis - secondcount < 5000){
     if (currentMillis - previousMillis >= 3000 && leftdist >= 100 && rightdist < 100 and L == 1) { 
       previousMillis = currentMillis;
       targetAngle += 90;
@@ -355,22 +415,26 @@ void Parking() {
       targetAngle -= 90;
       angle = 35;
       count++;
-      }    
+      }
     }
-
-    targetAngle -= 90;
+  }
+    currentAngle = 0;
     analogWrite(5, 0);
     analogWrite(6, 0);
     delay(500);
     Backward();
-    analogWrite(5, 75);
-    analogWrite(6, 75);
-    servo_9.write(90);
     delay(500);
+    analogWrite(5, 85);
+    analogWrite(6, 85);
 
-    while (abs(currentAngle - targetAngle) >= 5) {
-      servo_9.write(120);
-      updateGyroAngle();
+    CautionMillis = millis();
+    PreviousCautionMillis = millis();
+    while(CautionMillis - PreviousCautionMillis <= 1500){
+    CautionMillis = millis();
+      if(L == 1)
+      servo_9.write(125);
+      if(R == 1)
+      servo_9.write(55);
     }
     servo_9.write(90);
     MeasureDistance();
@@ -378,7 +442,7 @@ void Parking() {
     analogWrite(5, 60);
     analogWrite(6, 60);
 
-    while (leftdist >= 10 || rightdist >= 10) {
+    while (leftdist >= 15 || rightdist >= 15) {
       MeasureDistance();
       pixy.ccc.getBlocks();
       int colorX1 = 0;
@@ -409,9 +473,8 @@ void Parking() {
       servo_9.write(90);
     }
 
-    while (L == 1) {
+    while (L == 1 or R == 1) {
       servo_9.write(90);
       Stop();
-    }
   }
 }
