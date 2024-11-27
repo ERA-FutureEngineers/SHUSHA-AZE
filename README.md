@@ -15,8 +15,8 @@
 * [TeamPhoto](#tphoto)
 * [Steering system](#system)
 * [Logic of Codes](#code)
-  * [First Round](#code)
-  * [Second Round](#code2nd)
+  * [First round logic](#codel)
+  * [Second round logic](#codel2nd)
     
 
 ## Electronic-Components <a class="anchor" id="components"></a>
